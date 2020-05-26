@@ -64,7 +64,8 @@ window.addEventListener('keydown', (event) => {
 var frDiv;
 
 function setup() {
-  createCanvas(360, 360);
+  var canvas = createCanvas(360, 360);
+  canvas.parent('canvas-here')
   pixelDensity(1);
 
   //ySlider    = createSlider(-2, 2, 0, 0.0001);
