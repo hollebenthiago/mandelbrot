@@ -61,7 +61,7 @@ window.addEventListener('keydown', (event) => {
     
 })
 
-var frDiv;
+//var frDiv;
 
 function setup() {
   createCanvas(360, 360)
