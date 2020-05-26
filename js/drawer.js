@@ -62,17 +62,15 @@ window.addEventListener('keydown', (event) => {
 })
 
 //var frDiv;
-var canvas;
 function setup() {
-  canvas = createCanvas(360, 360);
-  canvas.parent('canvasHere')
-  pixelDensity(1);
+    var canvas = createCanvas(360, 360);
+    canvas.parent('canvasHere')
+    pixelDensity(1);
 
-  //ySlider    = createSlider(-2, 2, 0, 0.0001);
-  //xSlider    = createSlider(-2, 2, 0, 0.0001);
-  //sizeSlider = createSlider(0.00001, 4, 4 , 0.000001);
-  //iterSlider = createSlider(1, 500, 25, 1);
-
+    //ySlider    = createSlider(-2, 2, 0, 0.0001);
+    //xSlider    = createSlider(-2, 2, 0, 0.0001);
+    //sizeSlider = createSlider(0.00001, 4, 4 , 0.000001);
+    //iterSlider = createSlider(1, 500, 25, 1);
 }
 
 function draw() {
