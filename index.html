@@ -4,15 +4,24 @@ layout: default
 cv: passive
 notes: passive
 contact: passive -->
-description: Thiago Holleben is a graduate student at UFRJ.
+description:  Mandelbrot set visualizer.
 ---
 <!-- <div class="jumbotron"> -->
     <div class="row marketing">
         <div class='title'>
-            <h1>Mandelbrot</h1>
-            <p>Press q/w to zoom im/zoom out</p>
-            <p>Press space/b to increase/decrase number of max iterations</p>
-            <p>Move the center of the screen with directional arrows</p>
+            <h1>Mandelbrot set</h1>
+            <ul>
+                <li>
+                    <p>Press q/w to zoom im/zoom out</p>
+                </li>
+                <li>
+                    <p>Press space/b to increase/decrase number of max iterations</p>
+                </li>
+                <li>
+                    <p>Move the center of the screen with directional arrows</p>
+                </li>
+            </ul>
+            <script src="js/drawer.js"></script>
         </div>
         <div id='iter'   class='canvas-prop iter'><p>initial number of iterations: 20</p></div>
         <div id='zoom'   class='canvas-prop zoom'><p>initial zoom: 2</p></div>
