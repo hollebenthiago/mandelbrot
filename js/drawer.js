@@ -16,46 +16,46 @@ window.addEventListener('keydown', (event) => {
     //console.log(event.key);
     if (event.key == 'ArrowRight') {
         x_center = x_center + h*zoom;
-        console.log('center', x_center, y_center);
+        document.getElementById("center").innerHTML = "Center coordinates: ".concat('(', x_center, ', ', y_center, ')');
         //div_center.html(x_center, y_center);
         //document.getElementById('center').innerText = toString(x_center, y_center);
     }
     if (event.key == 'ArrowLeft') {
         x_center = x_center - h*zoom;
-        console.log('center', x_center, y_center);
+        document.getElementById("center").innerHTML = "Center coordinates: ".concat('(', x_center, ', ', y_center, ')');
         //div_center.html(x_center, y_center);
         //document.getElementById('center').innerText = toString(x_center, y_center);
     }
     if (event.key == 'ArrowUp') {
         y_center = y_center - h*zoom;
-        console.log('center', x_center, y_center);
+        document.getElementById("center").innerHTML = "Center coordinates: ".concat('(', x_center, ', ', y_center, ')');
         //div_center.html(x_center, y_center);
         //document.getElementById('center').innerHTML = toString(x_center, y_center);
     }
     if (event.key == 'ArrowDown') {
         y_center = y_center + h*zoom;
-        console.log('center', x_center, y_center);
+        document.getElementById("center").innerHTML = "Center coordinates: ".concat('(', x_center, ', ', y_center, ')');
         //div_center.html(x_center, y_center);
         //document.getElementById('center').innerHTML = toString(x_center, y_center);
     }
     if (event.key == ' ') {
         iter = floor(iter * 2) ;
-        console.log('iter', iter);
+        document.getElementById("iter").innerHTML = "Number of iterations: ".concat(iter);
         //document.getElementById('iter').innerHTML = toString(iter);
     }
     if (event.key == 'b') {
         iter = floor(iter * 0.5) ;
-        console.log('iter', iter);
+        document.getElementById("iter").innerHTML = "Number of iterations: ".concat(iter);
         //document.getElementById('iter').innerHTML = toString(iter);
     }
     if (event.key == 'q') {
         zoom = zoom * 0.9 ;
-        console.log('zoom', zoom);
+        document.getElementById("zoom").innerHTML = "Zoom: ".concat(zoom);
         //document.getElementById('zoom').innerHTML = toString(zoom);
     }
     if (event.key == 'w') {
         zoom = zoom * 10/9;
-        console.log('zoom', zoom);
+        document.getElementById("zoom").innerHTML = "Zoom: ".concat(zoom);
         //document.getElementById('zoom').innerHTML = toString(zoom);
     }
     
