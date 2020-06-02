@@ -56,7 +56,7 @@ window.addEventListener('keydown', (event) => {
         document.getElementById("iter").innerHTML = "Number of iterations: ".concat(iter);
         //document.getElementById('iter').innerHTML = toString(iter);
     }
-    if (event.key == 'b') {
+    if (event.key == 'b' && iter > 1) {
         iter = floor(iter * 0.5) ;
         document.getElementById("iter").innerHTML = "Number of iterations: ".concat(iter);
         //document.getElementById('iter').innerHTML = toString(iter);
@@ -70,6 +70,14 @@ window.addEventListener('keydown', (event) => {
         zoom = zoom * 10/9;
         document.getElementById("zoom").innerHTML = "Zoom: ".concat(zoom);
         //document.getElementById('zoom').innerHTML = toString(zoom);
+    }
+    if (event.key == 'o') {
+        degree ++;
+        document.getElementById("degree").innerHTML = "".concat('z^',degree, ' + c');
+    }
+    if (event.key == 'p' && degree > 1) {
+        degree --;
+        document.getElementById("degree").innerHTML = "".concat('z^',degree, ' + c');
     }
     
 })
