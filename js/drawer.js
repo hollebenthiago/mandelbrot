@@ -11,6 +11,9 @@ var zoom       = 2;
 //div_iter.html(iter);
 //div_zoom.html(zoom);
 //div_center.html(x_center, y_center);
+function mult(a,b,c,d) {
+    return [a *c - b * d, a * d + b * c]
+}
 
 window.addEventListener('keydown', (event) => {
     //console.log(event.key);
@@ -88,21 +91,23 @@ loadPixels();
             var n = 0;
 
             while (n < iter) {
-            var aa = a * a - b * b;
-            var bb = 2 * a * b;
-            a = aa + ca;
-            b = bb + cb;
-            if (a * a + b * b > 8) {
-                break;
-            }
-            n++;
+                var aa = mult(a,b,a,b)[0]
+                var bb = mult(a,b,a,b)[1]
+                //var aa = a * a - b * b;
+                //var bb = 2 * a * b;
+                a = aa + ca;
+                b = bb + cb;
+                if (a * a + b * b > 8) {
+                    break;
+                }
+                n++;
             }
 
             var bright = map(n, 0, iter, 0, 1);
             bright = map(sqrt(bright), 0, 1, 0, 255);
 
             if (n == iter) {
-            bright = 0;
+                bright = 0;
             }
 
             var pix = (x + y * width) * 4;
