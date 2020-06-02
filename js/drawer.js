@@ -11,8 +11,17 @@ var zoom       = 2;
 //div_iter.html(iter);
 //div_zoom.html(zoom);
 //div_center.html(x_center, y_center);
-function mult(a,b,c,d) {
+function mult([a,b],[c,d]) {
     return [a *c - b * d, a * d + b * c]
+}
+
+function m(n, a, b) {
+    prods = [a,b]
+    while (n > 1) {
+        prods = mult([a, b], prods)
+        n--
+    }
+    return prods
 }
 
 window.addEventListener('keydown', (event) => {
@@ -91,8 +100,8 @@ loadPixels();
             var n = 0;
 
             while (n < iter) {
-                var aa = mult(a,b,a,b)[0]
-                var bb = mult(a,b,a,b)[1]
+                var aa = mult(2, a, b)[0]
+                var bb = mult(2, a, b)[1]
                 //var aa = a * a - b * b;
                 //var bb = 2 * a * b;
                 a = aa + ca;
