@@ -100,8 +100,8 @@ loadPixels();
             var n = 0;
 
             while (n < iter) {
-                var aa = mult(2, a, b)[0]
-                var bb = mult(2, a, b)[1]
+                var aa = m(2, a, b)[0]
+                var bb = m(2, a, b)[1]
                 //var aa = a * a - b * b;
                 //var bb = 2 * a * b;
                 a = aa + ca;
